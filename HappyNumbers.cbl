@@ -32,9 +32,9 @@
                MOVE WKS-NUMBER TO WKS-N
                PERFORM CALC-HAPPY-NUMBER-1 UNTIL WKS-N = 89 OR = 1
                IF WKS-N = 1
-                   DISPLAY "El numero es feliz!!"
+                   DISPLAY "------ El numero es feliz!! ------------"
                ELSE
-                   DISPLAY "El numero no es feliz"
+                   DISPLAY "------ El numero no es feliz -----------"
            ELSE IF WKS-OPTION = 2
                DISPLAY "Adios..."
            ELSE
@@ -46,10 +46,9 @@
            MOVE WKS-SUM TO WKS-N.
 
        CALC-HAPPY-NUMBER-2.
-           DISPLAY WKS-N
-           DIVIDE WKS-N INTO 10 GIVING WKS-N
-                                       REMAINDER WKS-DIG
+           DIVIDE WKS-N BY 10 GIVING WKS-N REMAINDER WKS-DIG
            MULTIPLY WKS-DIG BY WKS-DIG GIVING WKS-POTENCIA
-           ADD WKS-SUM TO WKS-POTENCIA GIVING WKS-SUM.
+           ADD WKS-POTENCIA TO WKS-SUM.
+
 
        END PROGRAM HappyNumbers.
